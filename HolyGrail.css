@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    margin: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.container-1 {
+    flex: 1;
+}
+.container-2 {
+    flex: 4 1 0;
+}
+nav {
+    background-color: yellowgreen;
+    min-height: 10vh;
+}
+header, footer {
+   background-color: aquamarine;
+   min-height: 10vh;
+   min-height: 10svh;
+   padding: 10px;
+}
+main {
+   display: flex;
+   flex-direction: column;
+   min-height: 80vh;
+}
+aside {
+   background-color: brown;
+   flex: 0 0 20vh;
+}
+article {
+    background-color: beige;
+    flex: 1;
+}
+/*-- Media Query - Allows you to apply css style depending on the device's general type or other screen resolution or browser viewport width --*/
+
+@media (min-width: 577px) {
+    
+    .container {
+        flex-direction: row;
+    }
+    .container-1 {
+        max-width: 30vw;
+    }
+    .container-2 {
+        max-width: 70vw;
+    }
+    nav {
+        min-height: 100vh;
+    }
+
+}
+
+@media (min-width: 769px) {
+    
+    .container-1 {
+        max-width: 20vw;
+    }
+    .container-2 {
+        max-width: 80vw;
+    }
+    main {
+        flex-direction: row;
+    }
+
+    nav, aside {
+        flex: 0 0 20vw;
+    }
+    
+}
